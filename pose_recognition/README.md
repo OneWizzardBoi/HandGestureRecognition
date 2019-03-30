@@ -13,7 +13,7 @@ The other files serve as examples of how to use the different functionalities of
 Finally, a pickled classifier and feature extraction pipeline are provided in the project files to allow OTB movement classification.
 
 ##### Architecture
-![Architecture](file:///home/david/Documents/GIT/HandGestureRecognition/pose_recognition/Docs/Architecture%20Diagram.png)
+![Architecture](Docs/Architecture%20Diagram.png)
 
 
 ### Example files
@@ -22,12 +22,12 @@ Finally, a pickled classifier and feature extraction pipeline are provided in th
 This code sample transforms raw EMG acquisition files to acquisition files that contain only useful information in terms of movement recognition. In other words, the code cuts unnecessary data from the file leaving only a window of data which is considered useful.
 Currently, the code only keeps the window of data which corresponds to a hand pose being held. This means that the system can recognize a pose being held but not the transition from a pose to another. The picture below provides a more visual explanation.  
 **It is important to note that the code modifies all the acquisition files in the provided folder path, so there should be a folder dedicated to processed training data and another one for raw training data. This will reduce the chances of accidentally destroying the raw training data.**
-![Signal Anatomy](file:///home/david/Documents/GIT/HandGestureRecognition/pose_recognition/Docs/signal%20anatomy.png)
+![Signal Anatomy](Docs/signal%20anatomy.png)
 Note that this figure displays the signal only from one of the 8 sensors on the myo armband.
 
 ##### live_classification.py
 This code sample can be used to run OTB hand movement classifications.
-The code starts by restoring the pickled classifier and extraction pipeline from the project folder. After the restoration, communication with the armband is established via the [emg_comm](https://google.ca) package. 
+The code starts by restoring the pickled classifier and extraction pipeline from the project folder. After the restoration, communication with the armband is established via the [emg_comm](../emg_comm/) package. 
 A client function and an observer function are then defined in order to perform movement classifications and relay the results to a shared Redis database.
 Finally, the acquisition is started and the defined functions are launched through an EMGProcessManager instance provided by the emg_com package.
 
@@ -93,7 +93,7 @@ As mentioned earlier, the acquisition of EMG data was done with the [Pewter](htt
 ##### Placement of the arm band
 Band details             |  Band position
 :-------------------------:|:-------------------------:
-![](file:///home/david/Documents/GIT/HandGestureRecognition/pose_recognition/Docs/myo_armband.png)  |  ![](file:///home/david/Documents/GIT/HandGestureRecognition/pose_recognition/Docs/myo_position.png)
+![](Docs/myo_armband.png)  |  ![](Docs/myo_position.png)
 
 The yellow sticker placed on the Myo (right picture) corresponds to the sensor no.8 (left picture). Also, the USB port on the band should be pointing towards the user's hand.  
 
@@ -105,7 +105,7 @@ As seen on the "Signal anatomy" figure, the acquisition data is divided into two
 We chose this approach because it makes it easier to isolate the wanted data during preprocessing and because it ensures consistency throughout the data set.
 
 ### Package dependencies
-This project needs the [emg_comm](https://google.ca) package to be installed. Follow the link to get installation steps.
+This project needs the [emg_comm](../emg_comm/) package to be installed. Follow the link to get installation steps.
 
 ### System requirements
     - linux (ubuntu)

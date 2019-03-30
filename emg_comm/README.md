@@ -9,7 +9,7 @@ Other device interfaces will be implemented in the future.
 
 ### Architecture rundown
 
-![Architecture](file:///home/david/Documents/GIT/HandGestureRecognition/emg_comm/Docs/Architecture%20Diagram.png)
+![Architecture](Docs/Architecture%20Diagram.png)
     
 A Redis DB is created and shared with all processes: acquisition, clients and observers.
 
