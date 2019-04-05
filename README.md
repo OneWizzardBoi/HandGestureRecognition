@@ -10,7 +10,7 @@ I made the project as modular as possible by dividing it into 3 software compone
 
 **Note that this is meant to be an academic/research project and not an optimal solution for a scalable movement recognition.**
 
-The SynapsETS team plans to keep working on the project and add new components in the future. You should check out their branch [here](https://google.ca).
+The SynapsETS team plans to keep working on the project and add new components in the future. You should check out their fork [here](https://github.com/ClubSynapsETS/HandGestureRecognition).
 
 ### Components
 * [emg_comm](emg_comm/)
